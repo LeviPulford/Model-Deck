@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000;
   margin: 0;
   padding: 0;
   display: flex;
@@ -45,11 +45,11 @@ body {
 }
 
 .prev {
-  left: -50px; /* Move to the left outside the carousel */
+  left: -50px;
 }
 
 .next {
-  right: -50px; /* Move to the right outside the carousel */
+  right: -50px;
 }
 
 .nav-button:hover {
@@ -69,10 +69,10 @@ body {
 .model-card {
   background: #f0f0f0;
   padding: 20px;
-  width: 150px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 1px #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,13 +84,13 @@ body {
 
 .model-card.active {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
   border: 2px solid #007BFF;
 }
 
 .model-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
 }
 
 .model-card:nth-child(1) { background: hsla(0, 0%, 90%, 0.9); }
