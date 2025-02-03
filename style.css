@@ -11,8 +11,8 @@ body {
 
 /* Carousel Container */
 .carousel-container {
-  position: fixed;
-  width: 500px;  /* Fixed width for centering */
+  position: relative;
+  width: 500px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   width: 500px;
   height: 500px;
   margin: 0 auto;
-  position: fixed;
+  position: relative; /* Change from fixed to relative */
   transform-style: preserve-3d;
   transform-origin: center center;
   transition: transform 1s ease;
