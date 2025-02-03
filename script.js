@@ -3,14 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.prev');
   const nextButton = document.querySelector('.next');
 
-  let angle = 0;
-  const rotationStep = 72; // 360° divided by 5 cards
+  // Determine scroll step (card width + gap). Here: 150px + 20px = 170px.
+  // You may adjust this value if you change the card dimensions or gap.
+  const scrollStep = 170;
 
-  function rotateCarousel(direction) {
-    angle += direction * rotationStep;
-    carousel.style.transform = `rotateY(${angle}deg)`;
-  }
+  prevButton.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+  });
 
-  prevButton.addEventListener('click', () => rotateCarousel(-1));
-  nextButton.addEventListener('click', () => rotateCarousel(1));
+  nextButton.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+  });
 });
