@@ -10,12 +10,13 @@ body {
 
 .carousel-container {
   position: relative;
-  width: 500px;
+  width: 500px; /* fixed width for the layout */
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform-origin: center center;
+  perspective: 800px;
+  perspective-origin: center center;
 }
 
 .carousel {
