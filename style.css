@@ -29,7 +29,7 @@ body {
 
 /* Card Styles */
 .card {
-  position: absolute;
+  position: relative;
   width: 140px;   /* Using your specified dimensions */
   height: 97px;
   background: #f0f0f0;  /* Front: light gray */
@@ -42,20 +42,6 @@ body {
   color: #000;
   backface-visibility: hidden;
   transition: transform 0.5s ease;
-}
-
-/* Pseudo-element for the back side */
-/* When a card rotates far enough, its back will show as darker gray */
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ccc;  /* Darker gray for the back */
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
 }
 
 /* Navigation Buttons */
