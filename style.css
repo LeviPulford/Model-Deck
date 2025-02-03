@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   margin: 0;
@@ -7,6 +11,8 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .model-deck {
@@ -14,6 +20,7 @@ body {
   width: 80%;
   max-width: 800px;
   perspective: 1000px;
+  margin: 80px auto;
 }
 
 .nav-container {
@@ -25,7 +32,7 @@ body {
 .carousel-track {
   display: flex;
   transform-style: preserve-3d;
-  transition: transform 1s ease;
+  transition: transform 1s ease-in-out;
   position: relative;
   margin: 0 20px;
 }
@@ -43,36 +50,43 @@ body {
   align-items: center;
   transform-origin: center;
   backface-visibility: hidden;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
 }
 
 .model-card.active {
   transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #007BFF;
 }
 
-.model-card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
-.model-card:nth-child(2) { transform: rotateY(51.43deg) translateZ(200px); }
-.model-card:nth-child(3) { transform: rotateY(102.86deg) translateZ(200px); }
-.model-card:nth-child(4) { transform: rotateY(154.29deg) translateZ(200px); }
-.model-card:nth-child(5) { transform: rotateY(205.71deg) translateZ(200px); }
-.model-card:nth-child(6) { transform: rotateY(257.14deg) translateZ(200px); }
-.model-card:nth-child(7) { transform: rotateY(308.57deg) translateZ(200px); }
+.model-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.model-card:nth-child(1) { background: hsla(0, 0%, 90%, 0.9); }
+.model-card:nth-child(2) { background: hsla(30, 0%, 90%, 0.9); }
+.model-card:nth-child(3) { background: hsla(60, 0%, 90%, 0.9); }
+.model-card:nth-child(4) { background: hsla(90, 0%, 90%, 0.9); }
+.model-card:nth-child(5) { background: hsla(120, 0%, 90%, 0.9); }
+.model-card:nth-child(6) { background: hsla(150, 0%, 90%, 0.9); }
+.model-card:nth-child(7) { background: hsla(180, 0%, 90%, 0.9); }
 
 .nav-button {
   background-color: #333;
   color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 15px 20px;
+  border-radius: 50%;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 10;
 }
 
 .nav-button:hover {
   background-color: #555;
+  transform: scale(1.1);
 }
 
 .prev { margin-right: 10px; }
