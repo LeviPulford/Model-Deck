@@ -5,7 +5,7 @@ const cards = document.querySelectorAll('.model-card');
 let selectedIndex = 0;
 const cellCount = cards.length;
 const theta = 360 / cellCount;
-const radius = 300; // Fixed radius for consistent 3D effect
+const radius = 300;
 
 function initializeCarousel() {
   cards.forEach((card, index) => {
@@ -47,6 +47,5 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Initialize carousel positions and setup
 initializeCarousel();
 rotateCarousel();
