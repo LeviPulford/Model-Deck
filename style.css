@@ -8,29 +8,26 @@ body {
   height: 100vh;
 }
 
-/* Carousel Container */
 .carousel-container {
   position: relative;
   width: 80%;
   max-width: 800px;
-  overflow: hidden; /* Hide native scrollbar */
+  overflow: hidden;
 }
 
-/* Carousel */
 .carousel {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  gap: 20px;         /* Space between cards */
+  gap: 20px;
   padding: 20px;
-  /* Hide scrollbar in WebKit browsers */
 }
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-/* Card Styles */
 .card {
   flex: 0 0 auto;
   width: 150px;
@@ -45,7 +42,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Navigation Buttons */
 .nav {
   position: absolute;
   top: 50%;
