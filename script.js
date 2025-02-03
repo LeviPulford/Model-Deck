@@ -1,16 +1,17 @@
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
 
-let angle = 0; // Initial rotation angle
-const rotationStep = 72; // 360° / 5 cards = 72° per step
+  let angle = 0;
+  const rotationStep = 72; // 360°/5 = 72° per card
 
-prevButton.addEventListener('click', () => {
-  angle -= rotationStep;
-  carousel.style.transform = `rotateY(${angle}deg)`;
-});
+  function rotateCarousel(direction) {
+    carousel.style.animation = 'none'; // disable any auto-rotation
+    angle += direction * rotationStep;
+    carousel.style.transform = `rotateY(${angle}deg)`;
+  }
 
-nextButton.addEventListener('click', () => {
-  angle += rotationStep;
-  carousel.style.transform = `rotateY(${angle}deg)`;
+  prevButton.addEventListener('click', () => rotateCarousel(-1));
+  nextButton.addEventListener('click', () => rotateCarousel(1));
 });
