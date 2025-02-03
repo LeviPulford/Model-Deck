@@ -20,6 +20,11 @@ body {
   animation: rotate 15s infinite linear;
 }
 
+/* Pause rotation on hover */
+.carousel:hover {
+  animation-play-state: paused;
+}
+
 .card {
   position: absolute;
   width: 250px;
