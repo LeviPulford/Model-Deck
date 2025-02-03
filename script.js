@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const rotationStep = 72; // 360°/5 = 72° per card
 
   function rotateCarousel(direction) {
-    // Remove any auto-rotation (if you had an animation running)
-    carousel.style.animation = 'none';
+    carousel.style.animation = 'none'; // disable any auto-rotation
     angle += direction * rotationStep;
     carousel.style.transform = `rotateY(${angle}deg)`;
   }
