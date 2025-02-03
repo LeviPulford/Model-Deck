@@ -1,6 +1,7 @@
 body {
+  background-color: white;
   margin: 0;
-  background: #fff;  /* clean white background */
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,71 +9,48 @@ body {
   overflow: hidden;
 }
 
-.carousel-container {
+.model-deck {
   position: relative;
-  width: 500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 80%;
+  max-width: 800px;
+  perspective: 1000px;
 }
 
-.carousel {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  position: relative;
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-track {
+  display: flex;
   transform-style: preserve-3d;
   transition: transform 1s ease;
+  position: relative;
+  margin: 0 20px; /* Adds space between the carousel and buttons */
 }
 
-.card {
-  position: absolute;
-  width: 150px;
-  height: 250px;
-  background: #f0f0f0;  /* light gray */
+.model-card {
+  background-color: lightgray;
+  padding: 20px;
+  min-width: 200px;
+  min-height: 300px;
+  margin: 0 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform-origin: center center;
+  backface-visibility: hidden;
 }
 
-.card.active {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Adjusted translateZ to control spacing between cards */
-.card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
-.card:nth-child(2) { transform: rotateY(72deg) translateZ(200px); }
-.card:nth-child(3) { transform: rotateY(144deg) translateZ(200px); }
-.card:nth-child(4) { transform: rotateY(216deg) translateZ(200px); }
-.card:nth-child(5) { transform: rotateY(288deg) translateZ(200px); }
-
-.nav {
-  background-color: #333;
-  color: #fff;
+.nav-button {
+  background: none;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  font-size: 2rem;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: background-color 0.3s ease;
-  z-index: 10;
+  z-index: 1;
+  padding: 0 20px;
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.nav:hover {
-  background-color: #555;
-}
+.prev { margin-right: 10px; }
+.next { margin-left: 10px; }
