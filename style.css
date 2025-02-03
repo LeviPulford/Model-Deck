@@ -15,7 +15,7 @@ body {
 
 .carousel {
   width: 300px;
-  height: 200px;
+  height: 300px;
   position: relative;
   transform-style: preserve-3d;
   animation: rotate 15s infinite linear;
