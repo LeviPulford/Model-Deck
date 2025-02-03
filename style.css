@@ -22,10 +22,6 @@ body {
   transition: transform 1s ease; /* Smooth transition */
 }
 
-.carousel:hover {
-  animation-play-state: paused; /* Pauses rotation on hover */
-}
-
 .card {
   position: absolute;
   width: 250px;
