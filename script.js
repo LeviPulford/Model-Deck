@@ -3,15 +3,20 @@ const nextButton = document.querySelector('.next');
 const track = document.querySelector('.carousel-track');
 const cards = document.querySelectorAll('.model-card');
 let selectedIndex = 0;
-let angle = 0;
 const cellCount = cards.length;
 const theta = 360 / cellCount;
-const cellWidth = track.offsetWidth;
-const radius = Math.round((cellWidth / 2) / Math.tan(Math.PI / cellCount));
+const radius = 300; // Fixed radius for consistent 3D effect
+
+function initializeCarousel() {
+  cards.forEach((card, index) => {
+    const angle = theta * index;
+    card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+  });
+}
 
 function rotateCarousel() {
-  angle = theta * selectedIndex * -1;
-  track.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
+  const angle = theta * selectedIndex * -1;
+  track.style.transform = `rotateY(${angle}deg)`;
   updateActiveCard();
 }
 
@@ -42,5 +47,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Initial rotation setup
+// Initialize carousel positions and setup
+initializeCarousel();
 rotateCarousel();
