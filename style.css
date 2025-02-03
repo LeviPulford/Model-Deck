@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #111;
+  background: #fff;  /* clean white background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,39 +9,65 @@ body {
 }
 
 .carousel-container {
-  perspective: 800px;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel {
   width: 300px;
-  height: 200px;
+  height: 300px;
+  margin: 0 auto;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate 15s infinite linear;
+  transition: transform 1s ease;
 }
 
 .card {
   position: absolute;
-  width: 250px;
-  height: 150px;
-  background: #fff;
+  width: 150px;
+  height: 250px;
+  background: #f0f0f0;  /* light gray */
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transform-origin: center;
 }
 
-/* Position cards in a circular layout */
-.card:nth-child(1) { transform: rotateY(0deg) translateZ(350px); }
-.card:nth-child(2) { transform: rotateY(72deg) translateZ(350px); }
-.card:nth-child(3) { transform: rotateY(144deg) translateZ(350px); }
-.card:nth-child(4) { transform: rotateY(216deg) translateZ(350px); }
-.card:nth-child(5) { transform: rotateY(288deg) translateZ(350px); }
+/* Adjusted translateZ to control spacing between cards */
+.card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+.card:nth-child(2) { transform: rotateY(72deg) translateZ(200px); }
+.card:nth-child(3) { transform: rotateY(144deg) translateZ(200px); }
+.card:nth-child(4) { transform: rotateY(216deg) translateZ(200px); }
+.card:nth-child(5) { transform: rotateY(288deg) translateZ(200px); }
 
-/* Animation for rotation */
-@keyframes rotate {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+.nav {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav:hover {
+  background-color: #555;
 }
