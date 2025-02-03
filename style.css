@@ -33,7 +33,7 @@ body {
   margin: 0;
 }
 
-.item, .card {
+.card {
   min-width: 250px;
   height: 150px;
   background: white;
@@ -47,7 +47,7 @@ body {
   padding: 20px;
 }
 
-.item:hover, .card:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
