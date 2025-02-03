@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
@@ -31,25 +31,48 @@ body {
 }
 
 .model-card {
-  background-color: lightgray;
+  background: #f0f0f0;
   padding: 20px;
-  min-width: 200px;
-  min-height: 300px;
-  margin: 0 10px;
+  width: 150px;
+  height: 250px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transform-origin: center center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
   backface-visibility: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+.model-card.active {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.model-card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+.model-card:nth-child(2) { transform: rotateY(51.43deg) translateZ(200px); }
+.model-card:nth-child(3) { transform: rotateY(102.86deg) translateZ(200px); }
+.model-card:nth-child(4) { transform: rotateY(154.29deg) translateZ(200px); }
+.model-card:nth-child(5) { transform: rotateY(205.71deg) translateZ(200px); }
+.model-card:nth-child(6) { transform: rotateY(257.14deg) translateZ(200px); }
+.model-card:nth-child(7) { transform: rotateY(308.57deg) translateZ(200px); }
+
 .nav-button {
-  background: none;
+  background-color: #333;
+  color: #fff;
   border: none;
-  font-size: 2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  z-index: 1;
-  padding: 0 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.nav-button:hover {
+  background-color: #555;
 }
 
 .prev { margin-right: 10px; }
