@@ -39,6 +39,11 @@ body {
   transform-origin: center;
 }
 
+.card.active {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Adjusted translateZ to control spacing between cards */
 .card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
 .card:nth-child(2) { transform: rotateY(72deg) translateZ(200px); }
