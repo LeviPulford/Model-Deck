@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Rotate the carousel by a fixed angle increment
   function rotateCarousel(direction) {
     angle += direction * rotationStep;
-    carousel.style.transform = `rotateY(${angle}deg)`;
+    carousel.style.transform = `rotateY(${angle}deg) translateZ(-250px)`; // Adjusted to maintain centering
     // Optionally: Update the active card state here if you add dynamic highlighting
   }
 
