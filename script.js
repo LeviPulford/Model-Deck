@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.next');
 
   let angle = 0;
-  const rotationStep = 72; // 360° divided by 5 cards
+  const rotationStep = 72; // For 5 cards, each card occupies 72 degrees
 
-  // Rotate the carousel by a fixed angle increment
   function rotateCarousel(direction) {
     angle += direction * rotationStep;
-    carousel.style.transform = `rotateY(${angle}deg) translateZ(-250px)`; // Adjusted to maintain centering
-    // Optionally: Update the active card state here if you add dynamic highlighting
+    carousel.style.transform = `rotateY(${angle}deg)`;
   }
 
   prevButton.addEventListener('click', () => rotateCarousel(-1));
