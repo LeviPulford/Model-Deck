@@ -18,11 +18,11 @@ body {
   position: relative;
   transform-style: preserve-3d;
   animation: rotate 15s infinite linear;
+  animation-fill-mode: forwards; /* Ensures the animation holds its state */
 }
 
-/* Pause rotation on hover */
 .carousel:hover {
-  animation-play-state: paused;
+  animation-play-state: paused; /* Pauses rotation on hover */
 }
 
 .card {
