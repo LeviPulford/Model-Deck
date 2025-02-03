@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #111;
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,9 +25,9 @@ body {
 
 .card {
   position: absolute;
-  width: 250px;
-  height: 150px;
-  background: #fff;
+  width: 150px;
+  height: 250px;
+  background: #f0f0f0;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ body {
 
 .nav {
   background-color: #333;
-  color: white;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
