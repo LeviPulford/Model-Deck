@@ -48,8 +48,6 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.05);
-}
 
 .nav {
   background-color: #333;
