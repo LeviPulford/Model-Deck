@@ -24,14 +24,7 @@ body {
   gap: 15px;
   scroll-behavior: smooth;
   max-width: 80vw;
-}
 
-.list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
   /* Hide scrollbar in Firefox */
   scrollbar-width: none;
 
@@ -39,9 +32,16 @@ body {
   -ms-overflow-style: none;
 }
 
-/* Hide scrollbar in webkit */
-.list::-webkit-scrollbar {
+/* Hide scrollbar in Webkit (Chrome, Safari) */
+.carousel::-webkit-scrollbar {
   display: none;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -59,6 +59,8 @@ body {
 }
 
 .card:hover {
+  transform: scale(1.05);
+}
 
 .nav {
   background-color: #333;
@@ -73,8 +75,3 @@ body {
 .nav:hover {
   background-color: #555;
 }
-
-  transform: scale(1.05);
-}
-
-
