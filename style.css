@@ -10,6 +10,7 @@ body {
 
 .carousel-container {
   perspective: 800px;
+  position: relative; /* Added position relative */
 }
 
 .carousel {
