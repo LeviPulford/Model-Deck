@@ -16,7 +16,7 @@ function initializeCarousel() {
 
 function rotateCarousel() {
   const angle = theta * selectedIndex * -1;
-  track.style.transform = `rotateY(${angle}deg)`;
+  track.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
   updateActiveCard();
 }
 
