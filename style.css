@@ -45,6 +45,8 @@ body {
   align-items: center;
   transform-origin: center;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari and older browsers */
 }
 
 /* Highlight the active (front-facing) card */
