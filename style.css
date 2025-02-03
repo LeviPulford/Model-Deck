@@ -27,7 +27,7 @@ body {
   transform-style: preserve-3d;
   transition: transform 1s ease;
   position: relative;
-  margin: 0 20px; /* Adds space between the carousel and buttons */
+  margin: 0 20px;
 }
 
 .model-card {
