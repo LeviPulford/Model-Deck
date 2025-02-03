@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Model Deck</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Deck</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button class="nav prev">&#10094;</button>
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="card">Model A</div>
-      <div class="card">Model B</div>
-      <div class="card">Model C</div>
-      <div class="card">Model D</div>
-      <div class="card">Model E</div>
+
+<div class="model-deck" aria-label="AI Model Carousel">
+  <div class="nav-container">
+    <button class="nav-button prev" aria-label="Previous Model">&#10094;</button>
+    <div class="carousel-track">
+      <div class="model-card" tabindex="0">
+        <h3>Model A</h3>
+        <p>Description of Model A</p>
+        <p>Parameters: XYZ</p>
+        <p>Performance: 95%</p>
+      </div>
+      <div class="model-card" tabindex="0">
+        <h3>Model B</h3>
+        <p>Description of Model B</p>
+        <p>Parameters: ABC</p>
+        <p>Performance: 90%</p>
+      </div>
+      <div class="model-card" tabindex="0">
+        <h3>Model C</h3>
+        <p>Description of Model C</p>
+        <p>Parameters: LMN</p>
+        <p>Performance: 92%</p>
+      </div>
+      <!-- Add more cards as needed -->
     </div>
+    <button class="nav-button next" aria-label="Next Model">&#10095;</button>
   </div>
-  <button class="nav next">&#10095;</button>
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
