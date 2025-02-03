@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.next');
 
   let angle = 0;
-  const rotationStep = 72; // For 5 cards, each card occupies 72 degrees
+  const rotationStep = 72; // 360° divided by 5 cards
 
   function rotateCarousel(direction) {
     angle += direction * rotationStep;
