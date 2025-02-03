@@ -19,10 +19,12 @@ body {
   justify-content: center;
   perspective: 800px;
   perspective-origin: center center;
+  scroll-snap-type: x mandatory;
 }
 
 /* Carousel */
 .carousel {
+  scroll-snap-align: center;
   width: 500px;
   height: 500px;
   margin: 0 auto;
