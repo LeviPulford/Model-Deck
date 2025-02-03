@@ -18,7 +18,8 @@ body {
   position: relative;
   transform-style: preserve-3d;
   animation: rotate 15s infinite linear;
-  animation-fill-mode: forwards; /* Ensures the animation holds its state */
+  animation-play-state: paused; /* Pause by default */
+  transition: transform 1s ease; /* Smooth transition */
 }
 
 .carousel:hover {
