@@ -42,11 +42,11 @@ body {
 }
 
 /* Adjusted translateZ to control spacing between cards */
-.card:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
-.card:nth-child(2) { transform: rotateY(72deg) translateZ(200px); }
-.card:nth-child(3) { transform: rotateY(144deg) translateZ(200px); }
-.card:nth-child(4) { transform: rotateY(216deg) translateZ(200px); }
-.card:nth-child(5) { transform: rotateY(288deg) translateZ(200px); }
+.card:nth-child(1) { transform: rotateY(0deg) translateZ(180px); }
+.card:nth-child(2) { transform: rotateY(72deg) translateZ(180px); }
+.card:nth-child(3) { transform: rotateY(144deg) translateZ(180px); }
+.card:nth-child(4) { transform: rotateY(216deg) translateZ(180px); }
+.card:nth-child(5) { transform: rotateY(288deg) translateZ(180px); }
 
 .nav {
   background-color: #333;
