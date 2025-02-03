@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
   margin: 0;
-  background: #fff; /* Clean white background */
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,23 +11,21 @@ body {
 
 /* Carousel Container */
 .carousel-container {
-  position: fixed;  /* Lock the container in place */
+  position: relative; /* Center the container naturally */
   width: 500px;
-  margin: 0 auto;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;  /* Increase perspective for a better 3D effect */
+  perspective: 1200px; /* Adjusted for better 3D depth */
   perspective-origin: center center;
 }
 
 /* Carousel */
 .carousel {
-  scroll-snap-align: center;
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  position: relative; /* Use relative so it stays within the container */
+  width: 300px;
+  height: 300px;
+  position: relative;
   transform-style: preserve-3d;
   transform-origin: center center;
   transition: transform 1s ease;
@@ -37,32 +35,24 @@ body {
 .card {
   position: absolute;
   width: 150px;
-  height: 250px;
-  background: #f0f0f0; /* Light gray */
+  height: 200px;
+  background: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  transform-origin: center;
+  transform-origin: center center;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* For Safari and older browsers */
 }
 
-/* Optional: Highlight active card (if you choose to update dynamically) */
-/* .card.active {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-} */
-
 /* Position cards in a circular layout */
-/* Increase translateZ to 250px for more spacing */
-.card:nth-child(1) { transform: rotateY(0deg)   translateZ(250px); }
-.card:nth-child(2) { transform: rotateY(72deg)  translateZ(250px); }
-.card:nth-child(3) { transform: rotateY(144deg) translateZ(250px); }
-.card:nth-child(4) { transform: rotateY(216deg) translateZ(250px); }
-.card:nth-child(5) { transform: rotateY(288deg) translateZ(250px); }
+.card:nth-child(1) { transform: rotateY(0deg)   translateZ(300px); }
+.card:nth-child(2) { transform: rotateY(72deg)  translateZ(300px); }
+.card:nth-child(3) { transform: rotateY(144deg) translateZ(300px); }
+.card:nth-child(4) { transform: rotateY(216deg) translateZ(300px); }
+.card:nth-child(5) { transform: rotateY(288deg) translateZ(300px); }
 
 /* Navigation Buttons */
 .nav {
@@ -80,11 +70,11 @@ body {
 }
 
 .prev {
-  left: 10px;
+  left: -60px; /* Adjusted for spacing */
 }
 
 .next {
-  right: 10px;
+  right: -60px; /* Adjusted for spacing */
 }
 
 .nav:hover {
