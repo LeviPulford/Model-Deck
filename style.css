@@ -11,15 +11,14 @@ body {
 
 /* Carousel Container */
 .carousel-container {
-  position: fixede;
+  position: fixed;  /* Lock the container in place */
   width: 500px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 800px;
+  perspective: 1000px;  /* Increase perspective for a better 3D effect */
   perspective-origin: center center;
-  scroll-snap-type: x mandatory;
 }
 
 /* Carousel */
@@ -28,7 +27,7 @@ body {
   width: 500px;
   height: 500px;
   margin: 0 auto;
-  position: fixed;
+  position: relative; /* Use relative so it stays within the container */
   transform-style: preserve-3d;
   transform-origin: center center;
   transition: transform 1s ease;
@@ -51,18 +50,19 @@ body {
   -webkit-backface-visibility: hidden; /* For Safari and older browsers */
 }
 
-/* Highlight the active (front-facing) card */
-.card.active {
+/* Optional: Highlight active card (if you choose to update dynamically) */
+/* .card.active {
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Position cards in a circular layout */
-.card:nth-child(1) { transform: rotateY(0deg)   translateZ(180px); }
-.card:nth-child(2) { transform: rotateY(72deg)  translateZ(180px); }
-.card:nth-child(3) { transform: rotateY(144deg) translateZ(180px); }
-.card:nth-child(4) { transform: rotateY(216deg) translateZ(180px); }
-.card:nth-child(5) { transform: rotateY(288deg) translateZ(180px); }
+/* Increase translateZ to 250px for more spacing */
+.card:nth-child(1) { transform: rotateY(0deg)   translateZ(250px); }
+.card:nth-child(2) { transform: rotateY(72deg)  translateZ(250px); }
+.card:nth-child(3) { transform: rotateY(144deg) translateZ(250px); }
+.card:nth-child(4) { transform: rotateY(216deg) translateZ(250px); }
+.card:nth-child(5) { transform: rotateY(288deg) translateZ(250px); }
 
 /* Navigation Buttons */
 .nav {
