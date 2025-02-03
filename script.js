@@ -8,6 +8,13 @@ const rotateAngle = 360 / cards.length;
 function rotateCarousel(direction) {
   angle += direction * rotateAngle;
   track.style.transform = `rotateY(${angle}deg)`;
+  updateActiveCard();
+}
+
+function updateActiveCard() {
+  cards.forEach(card => card.classList.remove('active'));
+  const activeIndex = (Math.abs(angle / rotateAngle) % cards.length);
+  cards[activeIndex].classList.add('active');
 }
 
 prevButton.addEventListener('click', () => rotateCarousel(1));
