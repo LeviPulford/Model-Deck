@@ -14,7 +14,7 @@ body {
   position: relative;
   width: 500px;
   height: 300px;  /* Adjust height as needed */
-  perspective: 800px;
+  perspective: 200px;
   perspective-origin: center;
 }
 
