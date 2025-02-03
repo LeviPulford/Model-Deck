@@ -27,6 +27,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+.nav-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.prev {
+  left: -50px; /* Move to the left outside the carousel */
+}
+
+.next {
+  right: -50px; /* Move to the right outside the carousel */
+}
+
+.nav-button:hover {
+  background-color: #555;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-track {
@@ -35,7 +63,7 @@ body {
   transition: transform 1s ease-in-out;
   position: relative;
   margin: 0 20px;
-  transform-origin: center center; /* Ensure rotation around the center */
+  transform-origin: center center;
 }
 
 .model-card {
@@ -72,23 +100,3 @@ body {
 .model-card:nth-child(5) { background: hsla(120, 0%, 90%, 0.9); }
 .model-card:nth-child(6) { background: hsla(150, 0%, 90%, 0.9); }
 .model-card:nth-child(7) { background: hsla(180, 0%, 90%, 0.9); }
-
-.nav-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10;
-}
-
-.nav-button:hover {
-  background-color: #555;
-  transform: scale(1.1);
-}
-
-.prev { margin-right: 10px; }
-.next { margin-left: 10px; }
